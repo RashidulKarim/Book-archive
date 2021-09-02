@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Library</title>
     <!-- adding tailwaid Css  -->
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <style>
         #spinner {
             margin-top: 150px;
@@ -25,27 +25,53 @@
     <header class="my-6">
         <!-- input field and button  -->
         <div class="text-center">
-            <input class=" w-96 px-4 py-4 bg-black text-white text-3xl rounded-lg border-2 border-red-500"
-                id='search-field' type="text" placeholder="Search Your Desire Book">
-            <button class="py-4 px-4 ml-2 bg-black text-white text-3xl rounded-lg border-2 border-red-500"
-                onclick="getInputValue()">Search</button>
+            <input class="
+            w-1/3
+            px-12
+            py-2
+            bg-black
+            text-white text-3xl
+            rounded-lg
+            border-2 border-red-500" id="search-field" type="text" placeholder="Search Your Desire Book" />
+            <button class="
+            py-2
+            px-4
+            ml-2
+            bg-black
+            text-white text-3xl
+            rounded-lg
+            border-2 border-red-500
+          " onclick="getInputValue()">
+                Search
+            </button>
         </div>
-        <!-- No of Search Result Found  -->
+        <!-- Number of Search Result Found  -->
         <div class="mt-2">
-            <p class="text-2xl text-center" id="noOfResultFound"></p>
+            <p class="text-2xl text-center text-gray-400" id="noOfResultFound"></p>
         </div>
     </header>
+
     <main>
+
+        <!-- add spinner  -->
         <section>
-            <div id='spinner' style="display: none;">
-                <img src="image/Gear-0.2s-200px.svg" alt="">
+            <div id="spinner" style="display: none">
+                <img src="image/Gear-0.2s-200px.svg" alt="" />
             </div>
         </section>
+
         <!-- Books Contianer  -->
         <section>
-            <div id="books-container"
-                class="grid gap-4 my-4 w-3/4 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
+            <div id="books-container" class="
+                grid
+                gap-4
+                my-4
+                w-3/4
+                mx-auto
+                sm:grid-cols-1
+                md:grid-cols-2
+                lg:grid-cols-3
+                xl:grid-cols-4">
             </div>
         </section>
     </main>
