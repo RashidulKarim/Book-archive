@@ -6,9 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library</title>
+    <!-- adding tailwaid Css  -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #spinner img {
+
+            margin: auto;
+            height: auto;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-gray-100">
+    <header class="my-6">
+        <!-- input field and button  -->
+        <div class="text-center">
+            <input class=" w-96 px-4 py-4 bg-black text-white text-3xl rounded-lg border-2 border-red-500"
+                id='search-field' type="text" placeholder="Search Your Desire Book">
+            <button class="py-4 px-4 ml-2 bg-black text-white text-3xl rounded-lg border-2 border-red-500"
+                onclick="getInputValue()">Search</button>
+        </div>
+        <!-- No of Search Result Found  -->
+        <div class="mt-2">
+            <p class="text-2xl text-center" id="noOfResultFound"></p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div id='spinner' style="display: none;">
+                <img src="image/Gear-0.2s-200px.svg" alt="">
+            </div>
+        </section>
+        <!-- Books Contianer  -->
+        <section>
+            <div id="books-container"
+                class="grid gap-4 my-4 w-3/4 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+            </div>
+        </section>
+    </main>
+    <!-- adding js file  -->
     <script src="js/app.js"></script>
 </body>
 
